@@ -1,0 +1,14 @@
+{
+  "name": "request",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lich-h5/request.git"
+  },
+  "author": "LiChao",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
