@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {uniapp} from "./src/adapters"
+import {uniapp} from "./adapters"
 
 const defaultConf = {
     adapter: null,
@@ -23,8 +23,8 @@ export default class request {
         this.service = axios.create(axiosConf)
 
         // 加载特定适配器
-        if (conf.hasOwnProperty("adapter") && conf.adapter === "uniapp") {
-            this.service.defaults.adapter = uniapp
+        if (conf.hasOwnProperty("adapter") && conf.adapter !== null) {
+            this.service.defaults.adapter = conf.adapter
         }
 
         // 请求拦截器
