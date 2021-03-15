@@ -2,19 +2,17 @@ import axios from 'axios'
 
 const defaultConfig = {
     adapter: null,
-    interceptor: {
-        request_success: config => {
-            return config;
-        },
-        request_failed: error => {
-            return Promise.reject(error);
-        },
-        response_success: response => {
-            return response.data;
-        },
-        response_failed: error => {
-            return Promise.reject(error.response);
-        }
+    request_success: config => {
+        return config;
+    },
+    request_failed: error => {
+        return Promise.reject(error);
+    },
+    response_success: response => {
+        return response.data;
+    },
+    response_failed: error => {
+        return Promise.reject(error.response);
     }
 }
 
@@ -27,8 +25,8 @@ export default class Service {
             service.defaults.adapter = config.adapter
         }
 
-        service.interceptors.request.use(config.interceptor.request_success, config.interceptor.request_failed);
-        service.interceptors.response.use(config.interceptor.response_success, config.interceptor.response_failed);
+        service.interceptors.request.use(config.request_success, config.request_failed);
+        service.interceptors.response.use(config.response_success, config.response_failed);
 
         service.all = axios.all;
         service.spread = axios.spread;
