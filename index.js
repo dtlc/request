@@ -25,8 +25,7 @@ export default class Service {
         const service = axios.create(axiosOpts)
         // 加载特定适配器
         if (config.hasOwnProperty("adapter") && config.adapter !== null) {
-            console.log(uniapp)
-            service.defaults.adapter = uniapp
+            service.defaults.adapter = config.adapter
         }
 
         service.interceptors.request.use(config.interceptor.request_success, config.interceptor.request_failed);
