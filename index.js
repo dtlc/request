@@ -19,12 +19,13 @@ const defaultConfig = {
     }
 }
 
-export default class Request {
+export default class Service {
     constructor(axiosOpts, customConfig) {
         const config = Object.assign({}, defaultConfig, customConfig)
         const service = axios.create(axiosOpts)
         // 加载特定适配器
-        if (config.hasOwnProperty("adapter") && config.adapter === "uniapp") {
+        if (config.hasOwnProperty("adapter") && config.adapter !== null) {
+            console.log(uniapp)
             service.defaults.adapter = uniapp
         }
 
