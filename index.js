@@ -1,5 +1,4 @@
 import axios from 'axios'
-import {uniapp} from "./adapters"
 
 const defaultConfig = {
     adapter: null,
