@@ -1,11 +1,11 @@
 {
-  "name": "request",
-  "version": "1.1.0",
-  "main": "src/index.js",
-  "license": "MIT",
+  "name": "conn",
+  "version": "1.2.0",
+  "main": "index.js",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lich-h5/request.git"
+    "url": "git+https://github.com/lich-h5/conn.git"
   },
   "author": "LiChao",
   "dependencies": {
