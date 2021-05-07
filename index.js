@@ -16,22 +16,22 @@ const defaultConfig = {
     }
 }
 
-export default class Service {
+export default class Request {
     constructor(axiosOpts, customConfig) {
         const config = Object.assign({}, defaultConfig, customConfig)
-        const service = axios.create(axiosOpts)
+        const request = axios.create(axiosOpts)
         // 加载特定适配器
         if (config.hasOwnProperty("adapter") && config.adapter !== null) {
-            service.defaults.adapter = config.adapter
+            request.defaults.adapter = config.adapter
         }
 
-        service.interceptors.request.use(config.request_success, config.request_failed);
-        service.interceptors.response.use(config.response_success, config.response_failed);
+        request.interceptors.request.use(config.request_success, config.request_failed);
+        request.interceptors.response.use(config.response_success, config.response_failed);
 
-        service.all = axios.all;
-        service.spread = axios.spread;
+        request.all = axios.all;
+        request.spread = axios.spread;
 
-        return service
+        return request
     }
 }
 
