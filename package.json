@@ -1,5 +1,5 @@
 {
-  "name": "conn",
+  "name": "@h5-mod/request",
   "version": "1.3.0",
   "main": "index.js",
   "license": "ISC",
