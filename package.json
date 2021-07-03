@@ -1,0 +1,14 @@
+{
+  "name": "@lc7457/request",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/h5-mod/request.git"
+  },
+  "author": "lc7457",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
