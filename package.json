@@ -1,14 +1,14 @@
 {
-  "name": "@lc7457/request",
+  "name": "@dtlc/request",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/h5-mod/request.git"
+    "url": "https://github.com/dtlc/request.git"
   },
   "author": "lc7457",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.26.0"
   }
 }
